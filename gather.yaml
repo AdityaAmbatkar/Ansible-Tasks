@@ -1,0 +1,7 @@
+- name: gather 
+  hosts: all
+  tasks: 
+    - name: gather facts of nodes
+      debug:
+        msg:
+         - "ip of slave is {{}}"
