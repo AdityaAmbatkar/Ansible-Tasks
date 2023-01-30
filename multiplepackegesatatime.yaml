@@ -1,6 +1,5 @@
-- name: install php7.2 from a .deb on the internet
-    deb: http://security.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2_7.2.10-0ubuntu0.18.04.1_all.deb
-    state: present
-  become: true
-  register: apt_output
-  when: ansible_os_family == 'Debian'
+- name: Install a list of packages
+  ansible.builtin.apt:
+    pkg:
+    - foo
+    - foo-tools
