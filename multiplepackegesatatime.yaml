@@ -1,5 +1,5 @@
 - name: Install a list of packages
-  ansible.builtin.apt:
+  ansible.builtin.:
     pkg:
     - foo
     - foo-tools
