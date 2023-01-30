@@ -1,0 +1,8 @@
+- name: http and php7.2-mysql are installed
+  apt:
+    name: 
+      - httpd
+      - php7.2-mysql
+    state: present
+    update_cache: true
+  become: true
