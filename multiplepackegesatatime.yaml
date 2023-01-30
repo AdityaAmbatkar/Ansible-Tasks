@@ -1,8 +1,8 @@
-- name: http and php7.2-mysql are installed
-  apt:
-    name: 
+- name: Install packages
+  become: yes
+  package:
+    name:
       - httpd
-      - php7.2-mysql
+      - ssh
+      - ftp
     state: present
-    update_cache: true
-  become: true
