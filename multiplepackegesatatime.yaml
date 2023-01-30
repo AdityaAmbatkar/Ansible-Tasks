@@ -7,6 +7,5 @@
         name: 
           - nginx
           - apache2
-          - mariadb-server
           - tree
         state: present
