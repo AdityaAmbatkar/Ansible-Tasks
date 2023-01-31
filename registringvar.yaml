@@ -9,6 +9,14 @@
       debug:
         msg: "{{OUTPUT.stdout}}"
 
+    - name: print present working directory
+      shell: pwd
+      register: OUTPUT1
+    
+    - name: print working dir
+      debug:
+        msg: "{{OUTPUT1.stdout}}"    
+
 
 
 
