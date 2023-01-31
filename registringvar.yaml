@@ -9,13 +9,7 @@
       debug:
         msg: "{{OUTPUT.stdout}}"
 
-    - name: Registering pwd playbook
-      shell: pwd
-      register: OUTPUT1 
 
-     - name: print output
-       debug:
-        msg: "{{OUTPUT1.stdout}}"
-  
+
 
         
