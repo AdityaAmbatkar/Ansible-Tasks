@@ -3,14 +3,14 @@
   vars: 
     url: www.global.com
    
-   tasks:
+  tasks:
     - name: task1
       debug:
         msg: "value of variable is {{url}}" 
-  vars: 
-    url: www.local.com
+      vars: 
+        url: www.local.com
 
 
-- name: 
-  debug:
-    msg: "the value variablke is {{url}}"
+    - name: task2
+      debug:
+        msg: "the value variablke is {{url}}"
