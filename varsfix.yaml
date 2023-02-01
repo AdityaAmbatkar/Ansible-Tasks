@@ -3,11 +3,13 @@ hosts: all
 vars: 
   url: www.global.com
 tasks:
-  -name: task1
+
+ - name: task1
   debug: "value of variable is {{url}}" 
   vars: 
     url: www.local.com
 
-name: 
+    
+- name: 
   debug:
     msg: "the value variablke is {{url}}"
