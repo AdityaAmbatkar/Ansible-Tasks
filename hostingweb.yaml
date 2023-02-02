@@ -16,6 +16,7 @@
       unarchive: 
         src: /home/ubuntu/newlife.zip
         dest: /home/ubuntu
+        remote_src: yes
 
     - name: delete indexfile
       file: 
