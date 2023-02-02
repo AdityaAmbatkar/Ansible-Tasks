@@ -10,11 +10,10 @@
         state: present
 
     - name: download template
-      shell: wget https://www.free-css.com/assets/files/free-css-templates/download/page287/dicet-tv.zip
-
+      shell: wget https://www.free-css.com/assets/files/free-css-templates/download/page287/cycle.zip
     - name: extract zip file
       unarchive: 
-        src: /home/ubuntu/dicet-tv.zip
+        src: /home/ubuntu/cycle.zip
         dest: /home/ubuntu
         remote_src: yes
 
