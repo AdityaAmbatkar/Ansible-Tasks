@@ -2,5 +2,5 @@
   hosts: all
   tasks: 
    - package: "name=httpd state=present"
-   - copy: "src=index.html dest=/var/www/html"
+   - copy: "src=/root/index.html dest=/var/www/html"
    - sevice: "name:httpd state=started"
