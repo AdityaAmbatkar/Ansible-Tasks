@@ -13,7 +13,7 @@
       shell: wget https://www.free-css.com/assets/files/free-css-templates/download/page287/cycle.zip
     - name: extract zip file
       unarchive: 
-        src: /home/ubuntu/cycle.zip
+        src: /home/ubuntu/cycle
         dest: /home/ubuntu
         remote_src: yes
 
@@ -23,4 +23,4 @@
         state: absent
 
     - name: moving css to apache home
-      shell:  cp -r /home/ubuntu/html/* /usr/share/nginx/html/
+      shell:  cp -r /home/ubuntu/html/* /usr/share/nginx/html
