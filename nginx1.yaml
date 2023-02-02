@@ -24,4 +24,4 @@
         state: absent
 
     - name: moving css to apache home
-      shell:  cp -r /home/ubuntu/html/* /usr/share/nginx/html/index.html
+      shell:  cp -r /home/ubuntu/html/* /usr/share/nginx/html/
