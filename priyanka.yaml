@@ -1,0 +1,27 @@
+- name: hosting web page
+  hosts: all
+  become: true
+  tasks: 
+    - name: installing apache2
+      package: 
+        name: 
+          - apache2
+          - unzip
+        state: present
+
+    - name: download template
+      shell: wget https://www.free-css.com/assets/files/free-css-templates/download/page287/dicet-tv.zip
+
+    - name: extract zipfile
+      unarchive: 
+        src: /home/ubuntu/dicet-tv.zip
+        dest: /home/ubuntu
+        remote_src: yes
+
+    - name: delete indexfile
+      file: 
+        path: /var/www/html/index.html
+        state: absent
+
+    - name: moving css to apache home
+      shell:  cp -r /home/ubuntu/html/* /var/www/html
