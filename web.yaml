@@ -2,11 +2,15 @@
   hosts: all
   become: yes
   tasks: 
-    - name: apache2
+    - name: apache2 installation
+      apt: 
+      - name: apache2
+        state: present
      
 
-  tasks:
-    - name: copy file from one locatio to another location
-      ansible.builtin.copy:
-        src: /root/index.html
-        dest: /var/www/html
+ # tasks:
+  #
+  - name: copy file from one locatio to another location
+#      ansible.builtin.copy:
+ #       src: /root/index.html
+  #      dest: /var/www/html
