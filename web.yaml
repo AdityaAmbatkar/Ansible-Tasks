@@ -2,8 +2,10 @@
   hosts: all
   become: yes
   tasks: 
-    - name: httpd=present
-      
+    - name: httpd installation
+      apt: 
+      name: httpd
+      state: present
     
 
   tasks:
