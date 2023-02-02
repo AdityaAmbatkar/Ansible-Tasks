@@ -4,7 +4,7 @@
   tasks: 
     - name: install package
       ansible.builtin.package:
-        name:
+        name: httpd
 
   tasks:
     - name: copy file from one locatio to another location
