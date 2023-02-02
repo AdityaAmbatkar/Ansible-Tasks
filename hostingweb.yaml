@@ -3,8 +3,10 @@
   become: true
   tasks: 
     - name: installing apache2
-      pacakge: 
-        name: apache2
+      package: 
+        name: 
+          - apache2
+          - unzip
         state: present
 
     - name: download template
