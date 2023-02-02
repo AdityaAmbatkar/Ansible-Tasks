@@ -1,6 +1,13 @@
 - name: web deployment
   hosts: all
+  become: yes
   tasks: 
-   - package: "name=httpd state=present"
-   - copy: "src=/root/index.html dest=/var/www/html"
-   - sevice: "name:httpd state=started"
+    - name: install package
+      ansible.builtin.package:
+        name:
+
+  tasks:
+    - name: copy file from one locatio to another location
+      ansible.builtin.copy:
+        src: /root/index.html
+        dest: /var/www/html
