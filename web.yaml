@@ -2,9 +2,9 @@
   hosts: all
   become: yes
   tasks: 
-    - name: install package
-      ansible.builtin.package:
-        name: httpd
+    - name: httpd
+      
+    
 
   tasks:
     - name: copy file from one locatio to another location
