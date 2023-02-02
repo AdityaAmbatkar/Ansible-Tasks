@@ -1,0 +1,27 @@
+- name: hosting web page
+  hosts: all
+  become: true
+  tasks: 
+    - name: installing apache2
+      pacakge: 
+        name: apache2
+        state: present
+
+    - name: download template
+      shell: wget https://www.free-css.com/assets/files/free-css-templates/download/page287/newlife.zip
+
+    - name: extract zipfile
+      unarchive: 
+        src: /home/ubuntu/newlife.zip
+        dest: /home/ubuntu
+
+    - name: delete indexfile
+      file: 
+        path: /var/www/html/index.html
+        state: absent
+
+    - name: moving css to apache home
+      copy:
+        src: /home/ubuntu/html/*
+        dest: /var/www/html
+        remote_src: yes
