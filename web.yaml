@@ -8,9 +8,9 @@
         state: present
      
 
- # tasks:
-  #
+  tasks:
+  
   - name: copy file from one locatio to another location
-#      ansible.builtin.copy:
- #       src: /root/index.html
-  #      dest: /var/www/html
+      ansible.builtin.copy:
+        src: /root/index.html
+        dest: /var/www/html
