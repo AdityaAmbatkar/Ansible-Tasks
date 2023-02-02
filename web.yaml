@@ -2,11 +2,8 @@
   hosts: all
   become: yes
   tasks: 
-    - name: httpd installation
-      apt: 
-      name: httpd
-      state: present
-    
+    - name: apache2
+     
 
   tasks:
     - name: copy file from one locatio to another location
