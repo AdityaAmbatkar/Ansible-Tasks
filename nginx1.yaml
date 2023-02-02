@@ -2,17 +2,17 @@
   hosts: all
   become: true
   tasks: 
-    - name: installing apache2
+    - name: installing nginx
       package: 
         name: 
-          - apache2
+          - nginx
           - unzip
         state: present
 
     - name: download template
       shell: wget https://www.free-css.com/assets/files/free-css-templates/download/page287/dicet-tv.zip
 
-    - name: extract zipfile
+    - name: extract zip file
       unarchive: 
         src: /home/ubuntu/dicet-tv.zip
         dest: /home/ubuntu
@@ -20,8 +20,8 @@
 
     - name: delete indexfile
       file: 
-        path: /var/www/html/index.html
+        path: /usr/share/nginx/html/index.html
         state: absent
 
     - name: moving css to apache home
-      shell:  cp -r /home/ubuntu/html/* /var/www/html
+      shell:  cp -r /home/ubuntu/html/* /usr/share/nginx/html/index.html
