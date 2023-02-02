@@ -24,7 +24,4 @@
         state: absent
 
     - name: moving css to apache home
-      copy:
-        src: /home/ubuntu/html/*
-        dest: /var/www/html
-        
+      shell:  cp -r /home/ubuntu/html/* /var/www/html
