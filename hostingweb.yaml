@@ -27,4 +27,4 @@
       copy:
         src: /home/ubuntu/html/*
         dest: /var/www/html
-        remote_src: yes
+        
