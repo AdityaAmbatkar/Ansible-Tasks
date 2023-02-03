@@ -9,7 +9,7 @@
 
     - name: download tomcat
       get url: 
-        url:      https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz
+        url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz
         dest: /home/ubuntu
 
     - name: extracting file 
