@@ -1,0 +1,26 @@
+- name: template hosting playbook
+  hosts: all
+  become: yes 
+  tasks:
+    - name: Package installion
+      ansible.builtin.package:
+        state: present
+        name: "{{item}}"
+      loop:
+        - apache2
+        - unzip
+        - wget 
+
+    - name: download template
+      ansible.builtin.get_url:
+        url: https://www.free-css.com/assets/files/free-css-templates/download/page287/dicet-tv.zip
+        dest: /opt/
+
+    - name: unzip templete
+      ansible.builtin.unarchive:
+        src: /opt/dicet-tv.zip
+        dest: /var/www/html
+        remote_src: yes
+
+    - name: restart apache2 service 
+      shell: systemctl restart apache2
